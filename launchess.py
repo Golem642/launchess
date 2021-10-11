@@ -1,4 +1,3 @@
-#dames, échecs, puissance 4, snake, tetris, petits chevaux, 2048...
 import rtmidi
 from time import *
 import copy
@@ -6,42 +5,15 @@ import copy
 midiin = rtmidi.MidiIn()
 available_ports = midiin.get_ports()
 for i in range(len(available_ports)): available_ports[i]=available_ports[i][0:7]
-try: midiin.open_port(available_ports.index('MIDIIN2'))
+try: midiin.open_port(available_ports.index('MIDIIN2')) #change str here with your launchpad midi in
 except: print("No Launchpad was found for input")
 else: print('Launchpad input ready')
 midiout = rtmidi.MidiOut()
 available_ports = midiout.get_ports()
 for i in range(len(available_ports)): available_ports[i]=available_ports[i][0:8]
-try: midiout.open_port(available_ports.index('MIDIOUT2'))
+try: midiout.open_port(available_ports.index('MIDIOUT2')) #change str here with your launchpad midi out
 except: print("No Launchpad was found for output")
 else: print('Launchpad output ready')
-
-#pospad=[[64,65,66,67,96,97,98,99],
-#        [60,61,62,63,92,93,94,95],
-#        [56,57,58,59,88,89,90,91],
-#        [52,53,54,55,84,85,86,87],
-#        [48,49,50,51,80,81,82,83],
-#        [44,45,46,47,76,77,78,79],
-#        [40,41,42,43,72,73,74,75],
-#        [36,37,38,39,68,69,70,71]]
-
-def dames(): #problème: grille 10*10. soluce: tout ajouter
-    pospad=[[64,65,66,67,96,97,98,99],
-        [60,61,62,63,92,93,94,95],
-        [56,57,58,59,88,89,90,91],
-        [52,53,54,55,84,85,86,87],
-        [48,49,50,51,80,81,82,83],
-        [44,45,46,47,76,77,78,79],
-        [40,41,42,43,72,73,74,75],
-        [36,37,38,39,68,69,70,71]]
-    plat=[[0,2,0,2,0,2,0,2],
-          [2,0,2,0,2,0,2,0],
-          [0,2,0,2,0,2,0,2],
-          [0,0,0,0,0,0,0,0],
-          [0,0,0,0,0,0,0,0],
-          [1,0,1,0,1,0,1,0],
-          [0,1,0,1,0,1,0,1],
-          [1,0,1,0,1,0,1,0]]
 
 def echecs():
     #(changer la couleur des noirs : 103->69 ?)
