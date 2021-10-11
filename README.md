@@ -7,3 +7,5 @@ By default, the settings are set to work with a Launchpad Mini MK3 but you can c
 To access the game, you must enter Legacy mode on your Novation Launchpad and then start the project. If you are lost, take a look at the Python console.
 
 Have fun !
+
+P.S: the right column indicates you wich player turn it is depending on the color and you can press them to see your pieces and the other player pieces. The order is (from to to bottom): King, Queen, Fool, Horse, Tower and the normal pieces. (you can also press a piece to see wich one is it or look at the console)
